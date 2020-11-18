@@ -1,0 +1,43 @@
+<div>
+  <h3>Liste des livres</h3>
+
+  <p *ngIf="Product.length <= 0">Aucun produit enregistré</p>
+
+  <table class="table" *ngIf="Product.length > 0">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Série</th>
+        <th scope="col">Titre</th>
+        <th scope="col">Tome N°</th>
+        <th scope="col">Scénariste</th>
+        <th scope="col">Dessinateur</th>
+        <th scope="col">Prix en €</th>
+        <th scope="col">ISBN</th>
+        <th scope="col">Editer l'article</th>
+        <th scope="col">Supprimer l'article</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of Product; let i = index">
+        <th scope="row">{{i + 1}}</th>
+        <td>{{product.seriestitle}}</td>
+        <td>{{product.albumtitle}}</td>
+        <td>{{product.seriesnumber}}</td>
+        <td>{{product.writer}}</td>
+        <td>{{product.artist}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.isbn}}</td>
+        <td>
+          <button type="button" class="btn btn-warning" [routerLink]="['../edit-product/'+ product._id]">Editer</button>
+        </td>
+        <td>
+          <button type="button" class="btn btn-danger" (click)="removeProduct(product, i)">Supprimer</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<router-outlet></router-outlet>

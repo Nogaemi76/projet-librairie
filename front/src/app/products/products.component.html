@@ -1,0 +1,70 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Nos Livres</li>
+  </ol>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+    <!-- sidebar -->
+    <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+      <div class="sidebar-sticky">
+
+        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+          <a class="d-flex align-items-center text-muted" href="#" aria-label="" routerLinkActive="active"
+            routerLink="/products">
+            <span data-feather="plus-circle">Tous les livres</span>
+          </a>
+        </h6>
+
+        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+          <a class="d-flex align-items-center text-muted" href="#" aria-label="" routerLinkActive="active"
+            routerLink="/category">
+            <span data-feather="plus-circle">Nos Catégories</span>
+          </a>
+        </h6>
+
+      </div>
+    </nav>
+
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <div
+        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Nos Livres</h1>
+      </div>
+
+      <!-- books CARDS -->
+
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 mb-5">
+          <div class="col mb-5" *ngFor="let product of Product; let i = index">
+            <div class="card h-100">
+              <img src="{{product.imageurlthumb}}" class="card-img-top" alt="bd-cover">
+              <div class="card-body">
+                <h5 class="card-title">{{product.albumtitle}}</h5>
+                <h6 class="card-title">{{product.seriestitle}} {{product.seriesnumber}}</h6>
+                <p class="card-text">Scénariste : {{product.writer}}</p>
+                <p class="card-text">Dessinateur : {{product.artist}}</p>
+
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">{{product.price}} €</small>
+                <button type="button" class="btn btn-success float-right" [routerLink]="['/cart', product._id]"><i class="fas fa-cart-plus"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <a [routerLink]="['./cart']">Mon panier</a>
+    <br><br>
+    <router-outlet></router-outlet>
+
+  </div>
+</div>
+
+<app-footer></app-footer>
+
+

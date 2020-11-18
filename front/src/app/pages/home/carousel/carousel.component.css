@@ -1,0 +1,74 @@
+.card{
+  border: none;
+}
+.card-deck{
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+#carousel-wrapper-medium {
+  display: none;
+}
+#carousel-wrapper-small {
+  display: none;
+}
+#carousel-wrapper-xsmall {
+  display: none;
+}
+
+@media only screen and (max-width: 1250px) {
+  #carousel-wrapper-wide{
+    display: none;
+  }
+  #carousel-wrapper-medium {
+    display: block;
+  }
+  #carousel-wrapper-small {
+    display: none;
+  }
+  #carousel-wrapper-xsmall {
+    display: none;
+  }
+  .card-deck{
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #carousel-wrapper-wide{
+    display: none;
+  }
+  #carousel-wrapper-medium {
+    display: none;
+  }
+  #carousel-wrapper-small {
+    display: block;
+  }
+  #carousel-wrapper-xsmall {
+    display: none;
+  }
+  .card-deck{
+    margin-right: 15%;
+    margin-left: 15%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #carousel-wrapper-wide{
+    display: none;
+  }
+  #carousel-wrapper-medium {
+    display: none;
+  }
+  #carousel-wrapper-small {
+    display: none;
+  }
+  #carousel-wrapper-xsmall {
+    display: block;
+  }
+  .card{
+    margin-right: 15%;
+    margin-left: 15%;
+  }
+}

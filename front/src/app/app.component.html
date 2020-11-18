@@ -1,0 +1,21 @@
+<header>
+  <nav class="navbar navbar-dark">
+    <a class="navbar-brand" href="#">Le Raton Liseur</a>
+
+    <ul id="buttons-account" class="nav justify-content-end">
+      <li class="nav-item">
+        <a *ngIf="this.authService.isLoggedIn" class="nav-link">Mon compte</a>
+        <a *ngIf="!this.authService.isLoggedIn" class="nav-link btn button-login" routerLinkActive="active" routerLink="/login">Se connecter</a>
+      </li>
+      <li class="nav-item">
+        <a *ngIf="!this.authService.isLoggedIn" class="btn button-register" routerLinkActive="active"
+          routerLinkActive="active" routerLink="/signup">Créer un compte</a>
+        <button (click)="logout()" *ngIf="this.authService.isLoggedIn" type="button" class="btn btn-danger" routerLinkActive="active" routerLink="/login">Se déconnecter</button>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<app-nav></app-nav>
+
+<router-outlet></router-outlet>

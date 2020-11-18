@@ -1,0 +1,45 @@
+#myfooter-container {
+  background-color: #2A3132;
+  font-size: 14px;
+}
+#myfooter-container h5{
+  font-size: 16px;
+}
+#wrapper-normal-footer{
+  background-color: #2A3132;
+  color: white;
+}
+
+#wrapper-mobile-footer{
+  background-color: #2A3132;
+  color: white;
+  display: none;
+}
+
+#wrapper-mobile-footer .card {
+  background-color: #2A3132;
+}
+#wrapper-mobile-footer .card h2 button{
+  color: white;
+}
+i{
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+.bottom-footer{
+  margin-top: 30px;
+}
+.bottom-footer a {
+  color: white;
+}
+
+
+@media only screen and (max-width: 750px) {
+  #wrapper-mobile-footer{
+    display: block;
+  }
+  #wrapper-normal-footer{
+    display: none;
+  }
+}

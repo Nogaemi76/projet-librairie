@@ -1,0 +1,29 @@
+:host{
+  display: block;
+  background-color: #6C2D2C;
+  height: 100vh;
+}
+.brown-background{
+  background-color: #6C2D2C;
+}
+.beige-text {
+  color: #f1dcc9;
+}
+.mobile-layout{
+  display: none;
+}
+@media only screen and (max-width: 630px) {
+  .mobile-layout{
+    display: block;
+  }
+  .normal-layout{
+    display: none;
+  }
+  h1 {
+    margin-top: 20px;
+    font-size: 28px;
+  }
+  p {
+    font-size: 14px;
+  }
+}

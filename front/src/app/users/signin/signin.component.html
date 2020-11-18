@@ -1,0 +1,27 @@
+<div id="signin-container">
+  <div class="card sign-card" style="width: 50%;">
+    <div class="card-body">
+      <h5 class="card-title">Mon compte</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Je suis déjà client, je m'identifie pour accéder à mon compte</h6>
+      <form class="form-signin" [formGroup]="signinForm" (ngSubmit)="loginUser()">
+        <div class="form-group">
+          <label for="userEmail">Email</label>
+          <input type="email" class="form-control" formControlName="email" id="userEmail" aria-describedby="emailHelp"
+            placeholder="Entrez votre email *" required>
+        </div>
+        <div class="form-group">
+          <label for="userPassword">Mot de passe</label>
+          <input type="password" class="form-control" formControlName="password" id="userPassword"
+            placeholder="Entrez votre mot de passe *">
+        </div>
+        <button type="submit" class="btn btn-primary">Me connecter</button>
+        <p>* Champs obligatoires</p>
+        <div class="form-row">
+          <p>Vous n'êtes pas inscrit ?</p>
+          <a href="" routerLinkActive="active" routerLink="/signup">Créer un compte</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+

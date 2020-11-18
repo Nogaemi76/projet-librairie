@@ -1,0 +1,65 @@
+<form class="mb-5" [formGroup]="editForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="inputalbum">Titre de l'album *</label>
+    <input type="text" class="form-control" formControlName="albumtitle" id="inputalbum" placeholder="Entrez un titre" required>
+    <div class="form-control-feedback validation-text" *ngIf="submitted && myForm.albumtitle.errors.required">Un titre est
+      requis</div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-9">
+      <label for="inputseries">Titre de la série *</label>
+      <input type="text" class="form-control" formControlName="seriestitle" id="inputseries" placeholder="Entrez un titre" required>
+      <div class="form-control-feedback validation-text" *ngIf="submitted && myForm.seriestitle.errors.required">Un titre est
+        requis</div>
+    </div>
+    <div class="form-group col-md-3">
+      <label for="inputnumber">Tome N° *</label>
+      <input type="number" class="form-control" formControlName="seriesnumber" id="inputnumber" min="0" required>
+      <div class="form-control-feedback validation-text" *ngIf="submitted && myForm.seriesnumber.errors.required">Un numéro
+        est requis</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputwriter">Scénariste *</label>
+    <input type="text" class="form-control" formControlName="writer" id="inputwriter" placeholder="Entrez un nom" required>
+    <div class="form-control-feedback validation-text" *ngIf="submitted && myForm.writer.errors.required">Un nom est requis
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputartist">Dessinateur *</label>
+    <input type="text" class="form-control" formControlName="artist" id="inputartist" placeholder="Entrez un nom" required>
+    <div class="form-control-feedback validation-text" *ngIf="submitted && myForm.artist.errors.required">Un nom est requis
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="inputprice">Prix *</label>
+      <input type="number" class="form-control" formControlName="price" id="inputprice" min="0" step="0.01" required>
+      <div class="form-control-feedback validation-text" *ngIf="submitted && myForm.price.errors.required">Un prix est requis
+      </div>
+    </div>
+    <div class="form-group col-md-8">
+      <label for="inputisbn">ISBN *</label>
+      <input type="text" class="form-control" formControlName="isbn" id="inputisbn" required>
+      <div class="form-control-feedback validation-text" *ngIf="submitted && myForm.isbn.errors.required">Un numéro ISBN est
+        requis</div>
+    </div>
+    <div class="form-group col-md-8">
+      <label for="inputimageurl">Url de l'image - Grand Format *</label>
+      <input type="text" class="form-control" formControlName="imageurl" id="inputimageurl" required>
+      <div class="form-control-feedback validation-text" *ngIf="submitted && myForm.imageurl.errors.required">Une adresse url
+        est requise</div>
+    </div>
+    <div class="form-group col-md-8">
+      <label for="inputimageurlthumb">Url de l'image - Thumbnail *</label>
+      <input type="text" class="form-control" formControlName="imageurlthumb" id="inputimageurlthumb" required>
+      <div class="form-control-feedback validation-text" *ngIf="submitted && myForm.imageurlthumb.errors.required">Une adresse
+        url est requise</div>
+    </div>
+  </div>
+  <p>* Champs obligatoires</p>
+  <button type="submit" class="btn btn-success">Valider les modifications</button>
+  <!-- <input type="reset" class="btn btn-warning ml-3" value="Effacer les champs"> -->
+</form>
+
+<router-outlet></router-outlet>

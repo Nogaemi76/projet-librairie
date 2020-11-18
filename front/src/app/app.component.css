@@ -1,0 +1,28 @@
+header{
+  background-color: #336b87;
+}
+
+.button-login{
+  background-color: #6c2d2c;
+  color: #f1dcc9;
+}
+
+.button-login.active{
+  background-color: #9f4636;
+}
+
+.button-register{
+  background-color: #f1dcc9;
+  color: #6c2d2c;
+}
+.button-register.active{
+  background-color: #EDA699;
+  /* color: #f1dcc9; */
+}
+
+#buttons-account li{
+  margin-right:10px;
+}
+/* * {
+  font-family: 'Lato', sans-serif;
+} */

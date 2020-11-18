@@ -1,0 +1,26 @@
+
+<router-outlet></router-outlet>
+<h2>Liste des comptes clients</h2>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nom</th>
+      <th scope="col">Prénom</th>
+      <th scope="col">Email</th>
+      <th scope="col">Editer le compte</th>
+      <th scope="col">Supprimer le compte</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let customer of customers; let i = index">
+      <th scope="row">{{i + 1}}</th>
+      <td>{{customer.lastname}}</td>
+      <td>{{customer.firstname}}</td>
+      <td>{{customer.email}}</td>
+      <td><button type="button" class="btn btn-warning">Editer</button></td>
+      <td><button type="button" class="btn btn-danger">Supprimer</button></td>
+    </tr>
+  </tbody>
+</table>

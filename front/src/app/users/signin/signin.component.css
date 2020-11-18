@@ -1,0 +1,11 @@
+:host {
+  display: block;
+  background-color: #90afc5;
+  height: 100vh;
+}
+#signin-container{
+  padding-top: 10%;
+}
+.sign-card{
+  margin: 0 auto;
+}

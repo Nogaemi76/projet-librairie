@@ -1,0 +1,140 @@
+.brown-background{
+  background-color: #6c2d2c;
+}
+.dark-brown-font {
+  color: #42313a;
+}
+.beige-text{
+  color: #f1dcc9;
+}
+.blue-text{
+  color: #eaf1f7;
+}
+
+.cat-card{
+  border: none;
+  background-color: #6c2d2c;
+  margin-bottom: 15px;
+  height: 200px;
+  position: relative;
+}
+
+.imgpolar{
+  background-image: url('../../../assets/images/cat-img/cat-polar.jpg');
+}
+.imgscifi{
+  background-image: url('../../../assets/images/cat-img/cat-scifi.jpg');
+}
+.imgfantastique{
+  background-image: url('../../../assets/images/cat-img/cat-fantasy.jpg');
+}
+.imgwestern{
+  background-image: url('../../../assets/images/cat-img/cat-western.jpg');
+}
+.imgpolar{
+  background-image: url('../../../assets/images/cat-img/cat-polar.jpg');
+}
+.imghistoire{
+  background-image: url('../../../assets/images/cat-img/cat-histoire.jpg');
+}
+.imghumour{
+  background-image: url('../../../assets/images/cat-img/cat-humour.jpg');
+}
+.imgjeunesse{
+  background-image: url('../../../assets/images/cat-img/cat-jeunesse.jpg');
+}
+.imgdoc{
+  background-image: url('../../../assets/images/cat-img/cat-doc.jpg');
+}
+.imgjromangraph{
+  background-image: url('../../../assets/images/cat-img/cat-romangraph.jpg');
+}
+.imgcomics{
+  background-image: url('../../../assets/images/cat-img/cat-comics.jpg');
+}
+.imgmangas{
+  background-image: url('../../../assets/images/cat-img/cat-manga.jpg');
+}
+.imginde{
+  background-image: url('../../../assets/images/cat-img/cat-inde.jpg');
+}
+.cat-banner{
+  background-color: #f1dcc9;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.card-deck{
+  margin-right: 150px;
+  margin-left: 150px;
+}
+
+.home-titles{
+  color: #f1dcc9;
+  padding-top: 50px;
+  margin-bottom: 30px;
+}
+.slideshow-title{
+  font-size: 50px;
+  margin-bottom: 15vh;
+}
+#section-aboutus{
+  padding-bottom: 30px;
+}
+#aboutus-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 10vw;
+  padding: 30px;
+  background-color: #f1dcc9;
+  border-radius: 5px;
+}
+#aboutus-img{
+  flex-basis: 50%;
+}
+#aboutus-img img{
+  width: 100%;
+}
+#aboutus-text{
+  flex-basis: 50%;
+  padding-left: 30px;
+}
+
+.mobile-layout{
+  display: none;
+}
+
+@media only screen and (max-width: 1000px){
+  #aboutus-img{
+    flex-basis: 100%;
+  }
+  #aboutus-text{
+    flex-basis: 100%;
+    padding-left: 0;
+    padding-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .mobile-layout{
+    display: block;
+    font-size: 12px;
+  }
+  .normal-layout{
+    display: none;
+  }
+
+  h3{
+    font-size: 24px;
+  }
+  h4{
+    font-size: 18px;
+  }
+
+  #aboutus-wrapper p{
+    font-size: 12px;
+  }
+}
+

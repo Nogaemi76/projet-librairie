@@ -1,0 +1,48 @@
+<div id="signup-container">
+  <div class="card sign-card" style="width: 50%;">
+    <div class="card-body">
+      <h5 class="card-title">Nouveau client ?</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Inscrivez-vous pour créer votre compte</h6>
+      <form class="form-signin" [formGroup]="signupForm" (ngSubmit)="registerUser()">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="lastname">Nom</label>
+            <input type="text" class="form-control" formControlName="name" id="lastname" placeholder="Entrez votre nom *"
+              required>
+          </div>
+          <!-- <div class="form-group col-md-6">
+            <label for="firstname">Prénom</label>
+            <input type="text" class="form-control" id="firstname" placeholder="Entrez votre prénom *">
+          </div> -->
+        </div>
+        <div class="form-group">
+          <label for="userEmail">Adresse email</label>
+          <input type="email" class="form-control" formControlName="email" id="userEmail" aria-describedby="emailHelp"
+            placeholder="Entrez votre email *" required>
+        </div>
+        <!-- <div class="form-group">
+          <label for="userConfirmEmail">Confirmez votre email</label>
+          <input type="email" class="form-control" id="userConfirmEmail" aria-describedby="emailHelp"
+            placeholder="Entrez votre email *" required>
+        </div> -->
+        <div class="form-group">
+          <label for="userPassword">Mot de passe</label>
+          <div class="input-group mb-3">
+            <input type="password" class="form-control" formControlName="password" id="userPassword"
+              placeholder="Entrez votre mot de passe *" aria-label="password" aria-describedby="button-addon2">
+            <!-- <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button" id="button-addon2">Voir le mot de passe</button>
+            </div> -->
+          </div>
+        </div>
+        <!-- <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="inputcgu">
+          <label class="form-check-label" for="inputcgu">J'accepte les Conditions Générales d'Utilisation</label>
+        </div> -->
+        <button type="submit" class="btn btn-primary">Créer un compte</button>
+        <p>* Champs obligatoires</p>
+      </form>
+    </div>
+  </div>
+</div>
+
